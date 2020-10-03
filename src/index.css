@@ -2,6 +2,15 @@
   margin: 0;
 }
 
+/* Hide ScrollBar */
+* {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 body {
   background-color: rgb(234, 237, 237);
   margin: 0;
