@@ -7,7 +7,7 @@
     padding: 20px;
     background-color: #f3f3f3;
     border: 1px solid #dddddd;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 .subtotal__gift {
@@ -28,4 +28,22 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
+}
+
+.subtotal > button:hover {
+  transform: scale(1.03);
+  transform-origin: center center;
+}
+
+@media only screen and (max-width: 1080px) {
+  .subtotal {
+    width: calc(100% - 40px);
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .subtotal {
+    min-width: calc(100% - 40px);
+  }
 }

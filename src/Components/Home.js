@@ -20,7 +20,7 @@ function Home() {
         .then((data) => setProductList(data))
         .catch((error) =>
           alert(
-            "There was a problem retrieving the item list, please try reloading the page or try again later. Sorry for the inconvenient..."
+            "There was a problem retrieving the item list."
           )
         );
     };
@@ -36,7 +36,7 @@ function Home() {
         .then((data) => setImgList(data))
         .catch((error) =>
           alert(
-            "There was a problem retrieving the item list, please try reloading the page or try again later. Sorry for the inconvenient..."
+            "There was a problem retrieving the item list."
           )
         );
     };

@@ -1,17 +1,38 @@
 .checkout__ad {
-    width: 100%;
-    margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .checkout {
-    display: flex;
-    padding: 20px;
-    background-color: white;
-    height: max-content;
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+  min-height: calc(100vh - 60px);
 }
 
 .checkout__title {
-    margin-right: 10px;
-    padding: 10px;
-    border-bottom: 1px solid lightgray;
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
 }
+
+.checkout__left {
+  flex: 0.8;
+}
+.checkout__right {
+  flex: 0.2;
+}
+
+@media only screen and (max-width: 1080px) {
+  .checkout {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .checkout {
+    min-height: calc(100vh - 150px);
+  }
+}
+
