@@ -5,7 +5,15 @@ import CheckoutProduct from "./CheckoutProduct";
 import Subtotal from "./Subtotal";
 
 function Checkout() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const showUser = () => {
+    if (user) {
+      let index = user.email.indexOf("@");
+      const name = user.email.substring(0, index);
+      return name.charAt(0).toUpperCase() + name.slice(1);
+    } else return "Guest";
+  };
 
   return (
     <div className="checkout">
@@ -17,6 +25,7 @@ function Checkout() {
         />
 
         <div>
+          <h3 className="checkout__user">{user && `Hello, ${showUser()}`}</h3>
           <h2 className="checkout__title">Your Shopping Basket</h2>
 
           {basket.map((item) => (

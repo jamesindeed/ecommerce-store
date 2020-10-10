@@ -24,6 +24,12 @@
   flex: 0.2;
 }
 
+.checkout__user {
+  margin-right: 10px;
+  padding: 10px 10px 0 10px;
+  font-weight: 400;
+}
+
 @media only screen and (max-width: 1080px) {
   .checkout {
     flex-direction: column;
@@ -35,4 +41,3 @@
     min-height: calc(100vh - 150px);
   }
 }
-
