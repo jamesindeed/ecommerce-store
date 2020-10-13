@@ -26,7 +26,7 @@ function Header() {
 
   return (
     <div className="header">
-      <Link to={!user && '/login'}>
+      <Link to="/">
         <img className="header__logo" alt="" src={logo} />
       </Link>
       <div className="header__search">
@@ -35,7 +35,7 @@ function Header() {
       </div>
 
       <nav className="header__nav">
-        <Link to="/login" style={{ textDecoration: "none" }}>
+        <Link to={!user && "/login"} style={{ textDecoration: "none" }}>
           <div onClick={handleAuthentication} className="header__option">
             <span className="header__optionLineOne">Hello {showUser()}</span>
             <span className="header__optionLineTwo">
